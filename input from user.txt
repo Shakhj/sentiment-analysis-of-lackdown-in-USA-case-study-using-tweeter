@@ -1,0 +1,15 @@
+Input from the user
+X_test = ["it was bad"]
+X_clean
+# Data before cleaning
+'''
+X_train = ["This was really an bad situation",
+           "Pandemic situation i haven't seen since my childhood",
+           "Scared to go out",
+           "Very bad upto the mark",
+           "Many people's had lost their lives",
+           "Everyone is struggling to get job",
+           "Really disappointed by this lockdown"]
+'''
+
+

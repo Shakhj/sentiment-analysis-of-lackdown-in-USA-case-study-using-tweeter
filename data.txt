@@ -1,0 +1,30 @@
+# Tokenize
+# "I am a python dev" -> ["I", "am", "a", "python", "dev"]
+from nltk.tokenize import RegexpTokenizer
+# NLTK -> Tokenize -> RegexpTokenizer
+# Stemming
+# "Playing" -> "Play"
+# "Working" -> "Work"
+from nltk.stem.porter import PorterStemmer
+# NLTK -> Stem -> Porter -> PorterStemmer
+
+from nltk.corpus import stopwords
+# NLTK -> Corpus -> stopwords
+# Downloading the stopwords
+import nltk
+nltk.download('stopwords')
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+True
+tokenizer = RegexpTokenizer(r"\w+")
+en_stopwords = set(stopwords.words('english'))
+ps = PorterStemmer()
+def getCleanedText(text):
+  text = text.lower()
+
+  # tokenizing
+  tokens = tokenizer.tokenize(text)
+  new_tokens = [token for token in tokens if token not in en_stopwords]
+  stemmed_tokens = [ps.stem(tokens) for tokens in new_tokens]
+  clean_text = " ".join(stemmed_tokens)
+  return clean_text

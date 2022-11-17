@@ -1,0 +1,11 @@
+X_train = ["This was really an bad situation",
+           "Pandemic situation i haven't seen since my childhood",
+           "Scared to go out",
+           "Very bad upto the mark",
+           "Many people's had lost their lives",
+           "Everyone is struggling to get job",
+           "Really disappointed by this lockdown"]
+# X_test = "it was really bad situation  and really disspntd"
+
+y_train = ["positive","positive","positive","positive","negative","negative","negative"] # 1- Positive class, 0- negative class
+X_train

@@ -1,0 +1,8 @@
+from sklearn.feature_extraction.text import CountVectorizer
+cv = CountVectorizer(ngram_range = (1,2))
+# "I am PyDev" -> "i am", "am Pydev"
+X_vec = cv.fit_transform(X_clean).toarray()
+X_vec
+print(cv.get_feature_names())
+Xt_vect = cv.transform(xt_clean).toarray()
+Xt_vect
